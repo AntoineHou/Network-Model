@@ -22,7 +22,8 @@ class Snapshot:
         return self.G.degree()
     
     def Network_Topology (self) : 
-        return {'Network_Size' : len(self.G.vs), 'Network_Density' : float(self.G.density()), 'Network_Gini' : self.Gini(self.degree_distribution()) , 'Degree_Distribution' : self.degree_distribution()} 
+        return {'Network_Size' : len(self.G.vs), 'Network_Density' : float(self.G.density()), 'Network_Gini' : self.Gini(self.degree_distribution()) , 
+                'Degree_Distribution' : self.degree_distribution()} 
     
     # export the network topology to a json file
     def export_Network_Topology (self, path):

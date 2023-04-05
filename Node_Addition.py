@@ -73,11 +73,10 @@ class Node_Addition:
 
     def add_vertex (self) : 
         G = self.G
-        uniform_samples  = np.random.uniform(0,1 , self.N_Node_Addition)
         for i in range(self.N_Node_Addition):
             Name = str(uuid.uuid4())
             Pick = self.pick_in_library()            
-            V = G.add_vertex(name = Name , novelty = self.novelty_time , hype = uniform_samples[i])
+            V = G.add_vertex(name = Name , novelty = self.novelty_time , hype = random.randint(1, 10))
             for j in range(len(Pick)):
                 G.add_edge(V.index, Pick[j])
         return G
