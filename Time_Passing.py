@@ -23,4 +23,6 @@ class Time_Passing:
         for i in self.Previous_Step_Dict_Novel:
             if G.vs[i]['novelty'] > 0:
                 G.vs[i]['novelty'] -= 1
+            if G.vs[i]['novelty'] == 0:
+                G.vs[i]['hype'] = 0
         return G
